@@ -34,6 +34,9 @@ $ cp todin /usr/local/bin
 $ todin
 ```
 
+This creates a tasks.json file in the current directory.
+todin then uses this file to store all tasks and your edits on them.
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
