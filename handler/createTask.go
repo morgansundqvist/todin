@@ -44,6 +44,8 @@ func CreateTask(tasks *[]internalTypes.Task) {
 
 func ListTasksToDo(tasks *[]internalTypes.Task) {
 	SortTasksByPriority(tasks)
+	fmt.Println("")
+	fmt.Println("\033[1mID\tPrio\tTitle\033[0m")
 	for _, data := range *tasks {
 		if !data.IsDone {
 			fmt.Printf("%d\t%d\t%s\n", data.Id, data.Priority, data.Title)
@@ -52,6 +54,8 @@ func ListTasksToDo(tasks *[]internalTypes.Task) {
 }
 
 func ListTasksDone(tasks *[]internalTypes.Task) {
+	fmt.Println("")
+	fmt.Println("\033[1mID\tPrio\tTitle\033[0m")
 	for _, data := range *tasks {
 		if data.IsDone {
 			fmt.Printf("%d\t%d\t%s\n", data.Id, data.Priority, data.Title)
